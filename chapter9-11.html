@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Assignment # 9-10</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f7f6; color: #333; margin: 0; padding: 20px;">
+
+    <div style="max-width: 800px; margin: auto; background: #ffffff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <h1 style="text-align: center; color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px;">
+            User Input & Conditional Statements (JS Assignment 9-10)
+        </h1>
+        <p style="text-align: center; color: #666; margin-bottom: 30px;">
+            Click any button below to run the corresponding JavaScript program.
+        </p>
+
+        <!-- Task 1 -->
+        <div style="margin-bottom: 20px; padding: 15px; border: 1px solid #e0e0e0; border-radius: 5px; background-color: #fafafa;">
+            <h3 style="margin-top: 0; color: #2980b9;">1. City Welcome Message</h3>
+            <button onclick="task1()" style="background-color: #3498db; color: white; border: none; padding: 10px 15px; border-radius: 4px; cursor: pointer; font-size: 14px;">Run Task 1</button>
+        </div>
+
+        <!-- Task 2 -->
+        <div style="margin-bottom: 20px; padding: 15px; border: 1px solid #e0e0e0; border-radius: 5px; background-color: #fafafa;">
+            <h3 style="margin-top: 0; color: #2980b9;">2. Gender Greeting</h3>
+            <button onclick="task2()" style="background-color: #3498db; color: white; border: none; padding: 10px 15px; border-radius: 4px; cursor: pointer; font-size: 14px;">Run Task 2</button>
+        </div>
+
+        <!-- Task 3 -->
+        <div style="margin-bottom: 20px; padding: 15px; border: 1px solid #e0e0e0; border-radius: 5px; background-color: #fafafa;">
+            <h3 style="margin-top: 0; color: #2980b9;">3. Road Traffic Signal</h3>
+            <button onclick="task3()" style="background-color: #3498db; color: white; border: none; padding: 10px 15px; border-radius: 4px; cursor: pointer; font-size: 14px;">Run Task 3</button>
+        </div>
+
+        <!-- Task 4 -->
+        <div style="margin-bottom: 20px; padding: 15px; border: 1px solid #e0e0e0; border-radius: 5px; background-color: #fafafa;">
+            <h3 style="margin-top: 0; color: #2980b9;">4. Car Fuel Check</h3>
+            <button onclick="task4()" style="background-color: #3498db; color: white; border: none; padding: 10px 15px; border-radius: 4px; cursor: pointer; font-size: 14px;">Run Task 4</button>
+        </div>
+
+        <!-- Task 5 -->
+        <div style="margin-bottom: 20px; padding: 15px; border: 1px solid #e0e0e0; border-radius: 5px; background-color: #fafafa;">
+            <h3 style="margin-top: 0; color: #2980b9;">5. Condition Script Outputs</h3>
+            <button onclick="task5()" style="background-color: #3498db; color: white; border: none; padding: 10px 15px; border-radius: 4px; cursor: pointer; font-size: 14px;">Run Task 5 Alerts</button>
+            <div id="task5-output" style="margin-top: 10px; font-size: 14px; color: #27ae60; font-weight: bold;"></div>
+        </div>
+
+        <!-- Task 6 -->
+        <div style="margin-bottom: 20px; padding: 15px; border: 1px solid #e0e0e0; border-radius: 5px; background-color: #fafafa;">
+            <h3 style="margin-top: 0; color: #2980b9;">6. Marks Sheet & Grade Calculator</h3>
+            <button onclick="task6()" style="background-color: #3498db; color: white; border: none; padding: 10px 15px; border-radius: 4px; cursor: pointer; font-size: 14px;">Run Task 6</button>
+            <div id="marksheet-output" style="margin-top: 15px;"></div>
+        </div>
+
+        <!-- Task 7 -->
+        <div style="margin-bottom: 20px; padding: 15px; border: 1px solid #e0e0e0; border-radius: 5px; background-color: #fafafa;">
+            <h3 style="margin-top: 0; color: #2980b9;">7. Guess Game (1 to 10)</h3>
+            <button onclick="task7()" style="background-color: #3498db; color: white; border: none; padding: 10px 15px; border-radius: 4px; cursor: pointer; font-size: 14px;">Run Task 7</button>
+        </div>
+
+        <!-- Task 8 -->
+        <div style="margin-bottom: 20px; padding: 15px; border: 1px solid #e0e0e0; border-radius: 5px; background-color: #fafafa;">
+            <h3 style="margin-top: 0; color: #2980b9;">8. Divisible by 3 Check</h3>
+            <button onclick="task8()" style="background-color: #3498db; color: white; border: none; padding: 10px 15px; border-radius: 4px; cursor: pointer; font-size: 14px;">Run Task 8</button>
+        </div>
+
+        <!-- Task 9 -->
+        <div style="margin-bottom: 20px; padding: 15px; border: 1px solid #e0e0e0; border-radius: 5px; background-color: #fafafa;">
+            <h3 style="margin-top: 0; color: #2980b9;">9. Even or Odd Number Check</h3>
+            <button onclick="task9()" style="background-color: #3498db; color: white; border: none; padding: 10px 15px; border-radius: 4px; cursor: pointer; font-size: 14px;">Run Task 9</button>
+        </div>
+
+        <!-- Task 10 -->
+        <div style="margin-bottom: 20px; padding: 15px; border: 1px solid #e0e0e0; border-radius: 5px; background-color: #fafafa;">
+            <h3 style="margin-top: 0; color: #2980b9;">10. Weather Temperature Message</h3>
+            <button onclick="task10()" style="background-color: #3498db; color: white; border: none; padding: 10px 15px; border-radius: 4px; cursor: pointer; font-size: 14px;">Run Task 10</button>
+        </div>
+
+        <!-- Task 11 -->
+        <div style="margin-bottom: 20px; padding: 15px; border: 1px solid #e0e0e0; border-radius: 5px; background-color: #fafafa;">
+            <h3 style="margin-top: 0; color: #2980b9;">11. Basic Calculator (+, -, *, /, %)</h3>
+            <button onclick="task11()" style="background-color: #3498db; color: white; border: none; padding: 10px 15px; border-radius: 4px; cursor: pointer; font-size: 14px;">Run Task 11</button>
+        </div>
+    </div>
+
+    <script>
+        // 1. City Name
+        function task1() {
+            let  city = prompt("Enter your city name:");
+            if (city && city.toLowerCase() === "karachi") {
+                alert(" Welcome to city of lights ");
+            } else if (city) {
+                alert(" Welcome to " + city);
+            }
+        }
+
+        // 2. Gender Greeting
+        function task2() {
+            let gender = prompt("Enter your gender (male/female):");
+            if (gender) {
+                if (gender.toLowerCase() === "male") {
+                    alert("Good Morning Sir.");
+                } else if (gender.toLowerCase() === "female") {
+                    alert("Good Morning Ma'am.");
+                } else {
+                    alert("Good Morning!");
+                }
+            }
+        }
+
+        // 3. Traffic Signal-------
+        function task3() {
+            let color = prompt("Enter road traffic signal color (Red, Yellow, Green):");
+            if (color) {
+                let  c = color.toLowerCase();
+                if (c === "red") {
+                    alert("Must Stop");
+                } else if (c === "yellow") {
+                    alert("Ready to move");
+                } else if (c === "green") {
+                    alert("Move now ");
+                } else {
+                    alert("Invalid signal color entered.");
+                }
+            }
+        }
+
+        // 4. Fuel Check
+        function task4() {
+            let  fuel = parseFloat(prompt("Enter remaining fuel in car (in litres):"));
+            if (!isNaN(fuel)) {
+                if (fuel < 0.25) {
+                    alert("Please refill the fuel in your car");
+                } else {
+                    alert("You have enough fuel (" + fuel + " litres).");
+                }
+            }
+        }
+
+        // 5. Run Scripts & Check Alerts
+        function task5() {
+            // a
+            let a = 4;
+            if (++a === 5) {
+                alert("a: given condition for variable a is true"); // Displayed
+            }
+
+            // b
+            let  b = 82;
+            if (b++ === 83) {
+                alert("b: given condition for variable b is true"); // NOT Displayed (b is 82 during comparison)
+            }
+
+            // c
+            let c = 12;
+            if (c++ === 13) {
+                alert("c: condition 1 is true"); // NOT Displayed
+            }
+            if (c === 13) {
+                alert("c: condition 2 is true"); // Displayed
+            }
+            if (++c < 14) {
+                alert("c: condition 3 is true"); // NOT Displayed (c becomes 14)
+            }
+            if (c === 14) {
+                alert("c: condition 4 is true"); // Displayed
+            }
+
+            // d
+            let  materialCost = 20000;
+            let laborCost = 2000;
+            let totalCost = materialCost + laborCost;
+            if (totalCost === laborCost + materialCost) {
+                alert("d: The cost equals"); // Displayed
+            }
+
+            // e
+            if (true) {
+                alert("e: True"); // Displayed
+            }
+            if (false) {
+                alert("e: False"); // NOT Displayed
+            }
+
+            // f
+            if ("car" < "cat") {
+                alert("f: car is smaller than cat"); // Displayed ('r' comes before 't' alphabetically)
+            }
+
+            document.getElementById("task5-output").innerHTML = 
+                "Recorded Alerts Displayed: (a) True, (c) Condition 2 & 4, (d) Cost equals, (e) True, (f) car < cat. (b was false).";
+        }
+
+        // 6. Marks Sheet
+        function task6() {
+            let sub1 = parseFloat(prompt("Enter marks obtained in Subject 1:"));
+            let sub2 = parseFloat(prompt("Enter marks obtained in Subject 2:"));
+            let  sub3 = parseFloat(prompt("Enter marks obtained in Subject 3:"));
+            let totalMarks = parseFloat(prompt("Enter Total Marks:"));
+
+            if (isNaN(sub1) || isNaN(sub2) || isNaN(sub3) || isNaN(totalMarks) || totalMarks <= 0) {
+                alert("Please enter valid numbers for marks.");
+                return;
+            }
+
+            let obtainedMarks = sub1 + sub2 + sub3;
+            let  percentage = (obtainedMarks / totalMarks) * 100;
+            let  grade, remarks;
+
+            if (percentage >= 80) {
+                grade = "A-one";
+                remarks = "Excellent";
+            } else if (percentage >= 70) {
+                grade = "A";
+                remarks = "Good";
+            } else if (percentage >= 60) {
+                grade = "B";
+                remarks = "You need to improve";
+            } else {
+                grade = "Fail";
+                remarks = "Sorry";
+            }
+
+            document.getElementById("marksheet-output").innerHTML = 
+                "<div style='border: 2px solid #2c3e50; padding: 15px; background: #fff; border-radius: 5px;'>" +
+                "<h2 style='margin-top:0; color:#2c3e50;'>Marks Sheet</h2>" +
+                "<p style='margin: 5px 0;'><strong>Total marks :</strong> " + totalMarks + "</p>" +
+                "<p style='margin: 5px 0;'><strong>Marks obtained :</strong> " + obtainedMarks + "</p>" +
+                "<p style='margin: 5px 0;'><strong>Percentage :</strong> " + percentage.toFixed(2) + "%</p>" +
+                "<p style='margin: 5px 0;'><strong>Grade :</strong> " + grade + "</p>" +
+                "<p style='margin: 5px 0;'><strong>Remarks :</strong> " + remarks + "</p>" +
+                "</div>";
+        }
+
+        // 7. Guess Game
+        function task7() {
+            let  secretNumber = 7; // Stored secret number (1 to 10)
+            let guess = parseInt(prompt("Guess the secret number (between 1 and 10):"));
+
+            if (guess === secretNumber) {
+                alert("Bingo! Correct answer");
+            } else if (guess + 1 === secretNumber) {
+                alert("Close enough to the correct answer");
+            } else {
+                alert("Wrong guess! Try again.");
+            }
+        }
+
+        // 8. Divisible by 3
+        function task8() {
+            let  num = parseInt(prompt("Enter a number to check if it is divisible by 3:"));
+            if (!isNaN(num)) {
+                if (num % 3 === 0) {
+                    alert(num + " is divisible by 3.");
+                } else {
+                    alert(num + " is NOT divisible by 3.");
+                }
+            }
+        }
+
+        // 9. Even or Odd
+        function task9() {
+            let num = parseInt(prompt("Enter a number to check if it is Even or Odd:"));
+            if (!isNaN(num)) {
+                if (num % 2 === 0) {
+                    alert(num + " is an Even number.");
+                } else {
+                    alert(num + " is an Odd number.");
+                }
+            }
+        }
+
+        // 10. Temperature Criteria
+        function task10() {
+            let temp = parseFloat(prompt("Enter current temperature:"));
+            if (!isNaN(temp)) {
+                if (temp > 40) {
+                    alert("It is too hot outside.");
+                } else if (temp > 30) {
+                    alert("The Weather today is Normal.");
+                } else if (temp > 20) {
+                    alert("Today's Weather is cool.");
+                } else if (temp > 10) {
+                    alert("OMG! Today's weather is so Cool.");
+                } else {
+                    alert("It is freezing cold!");
+                }
+            }
+        }
+
+        // 11. Calculator
+        function task11() {
+            let num1 = parseFloat(prompt("Enter First Number:"));
+            let num2 = parseFloat(prompt("Enter Second Number:"));
+            let op = prompt("Enter Operation (+, -, *, /, %):");
+
+            if (isNaN(num1) || isNaN(num2)) {
+                alert("Invalid numbers entered.");
+                return;
+            }
+
+            if (op === "+") {
+                alert("Result: " + (num1 + num2));
+            } else if (op === "-") {
+                alert("Result: " + (num1 - num2));
+            } else if (op === "*") {
+                alert("Result: " + (num1 * num2));
+            } else if (op === "/") {
+                if (num2 === 0) {
+                    alert("Cannot divide by zero.");
+                } else {
+                    alert("Result: " + (num1 / num2));
+                }
+            } else if (op === "%") {
+                alert("Result: " + (num1 % num2));
+            } else {
+                alert("Invalid operator entered.");
+            }
+        }
+    </script>
+</body>
+</html>

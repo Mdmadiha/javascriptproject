@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions Table</title>
+</head>
+<body>
+   <script>
+    //24-11-2026----Functions (started Table )--------
+
+// marks for bhuvana & madih-------------
+
+function persons () {
+    let n=prompt(" enter name ")
+  let m = prompt (" Enter marks " )
+ let n1=prompt(" enter name ")
+  let m1 = prompt (" Enter marks "  ) 
+
+  document.write(`<table border='2'> <tr><th> Name </th><th>Marks</th></tr> <tr><td>${n}</td><td>${m}</td><tr><td>${n1}</td><td>${m1}</td></tr></table> <br><br>`)
+  
+    }
+    persons()
+
+    //Table project via using loops (for & While)------
+   document.write(`<table border='2>'
+   <tr>
+    <th>Name</th>
+    <th>Marks</th>
+        </tr>`)
+    
+        for (let a=1;a<=2;a++){
+            let m=prompt(" name ")
+            let d=prompt(" marks  ")
+            document.write(` <tr><td>${m}</td>
+                <td>${d}</td></tr> `)
+        }  
+document.write(`</table> <br><br>`)
+   </script> 
+</body>
+</html>

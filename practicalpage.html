@@ -1,0 +1,132 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practise Project</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: #f4f7f6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .input-box {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        input {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            flex: 1;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        td {
+            padding: 12px;
+            border: 1px solid #eee;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        .pass {
+            color: green;
+            font-weight: bold;
+        }
+
+        .fail {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Exam Result System</h2>
+        <div class="input-box">
+            <input type="text" id="studentName" placeholder="Student Name">
+            <input type="number" id="studentMarks" placeholder="Marks (0-100)">
+            <button onclick="addResult()">Add Result</button>
+
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Marks</th>
+                    <th>Grade</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="resultBody"></tbody>
+              </table>
+    </div>
+    </div>
+    
+    <script>
+    
+    function addResult() {
+            const name = document.getElementById("studentName").value;
+            const marks = document.getElementById("studentMarks").value;
+            const tableBody = document.getElementById("resultBody");
+
+            // 1. Validation: Use || (OR) to check if either field is empty
+            if (name === "" || marks === "") {
+                alert("Please enter both Name and Marks");
+                return;
+            }
+
+            // 2. Logic: Determine Grade and Status using Ternary Operators
+            const score = parseInt(marks);
+            const grade = score >= 90 ? "A+" : score >= 80 ? "A" : score >= 70 ? "B" : score >= 60 ? "C" : score >= 50 ? "D" : "F";
+            const status = score >= 50 ? "PASS" : "FAIL";
+            //const statusClass = status === "PASS" ? "pass" : "fail";
+
+            // 3. Create the table row
+            const row = document.createElement("tr");
+            row.innerHTML = `
+    <td>${name}</td>
+    <td>${score}</td>
+    <td>${grade}</td>
+    <td>${status}</td>
+  `;
+            // 4. Add to table and clear inputs
+            tableBody.appendChild(row);
+            document.getElementById("studentName").value = "";
+            document.getElementById("studentMarks").value = "";
+        }
+
+        
+//Assignment Operators-------
+let q=3
+let y=9
+q+=y
+console.log(q)
+//functions:
+function bhuvana (){
+    
+}
+        </script>
+</body>
+</html>

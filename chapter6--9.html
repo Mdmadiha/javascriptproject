@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chapter 6---9 </title>
+</head>
+<body style="font-family:Arial; background-color:#f5f5f5; padding:20px;">
+<h1 style="color:brown; text-align:center;"> JavaScript 6 --- 9 </h1>
+<script>
+//  1: Increment & Decrement-----------
+
+let a = 10;
+
+document.write("<h2 style='color:blue;'>Question 1</h2>");
+
+document.write("The value of a is: " + a + "<br><br>");
+
+document.write("The value of ++a is: " + (++a) + "<br>");
+document.write("Now the value of a is: " + a + "<br><br>");
+
+document.write("The value of a++ is: " + (a++) + "<br>");
+document.write("Now the value of a is: " + a + "<br><br>");
+
+document.write("The value of --a is: " + (--a) + "<br>");
+document.write("Now the value of a is: " + a + "<br><br>");
+
+document.write("The value of a-- is: " + (a--) + "<br>");
+document.write("Now the value of a is: " + a + "<br><br>");
+// 2: Maths Expression-----------
+document.write("<h2 style='color:blue;'>Question 2</h2>");
+let x = 2, b = 1;
+let result = --x - --b + ++b + b--;
+document.write("a = " + x + "<br>");
+document.write("b = " + b + "<br>");
+document.write("result = " + result + "<br><br>");
+// 3: Greeting User ----------
+document.write("<h2 style='color:blue;'>Question 3</h2>");
+let name = prompt("Enter your name");
+document.write("Welcome " + name + "!<br><br>");
+// 5: Multiplication Table-----------
+document.write("<h2 style='color:blue;'>Question 5</h2>");
+let  num = prompt("Enter a number for multiplication table");
+if (num === null || num.trim() === "" || isNaN(num)) {
+    num = 5;
+}
+num = Number(num);
+for (let i = 1; i <= 10; i++) {
+    document.write(num + " x " + i + " = " + (num * i) + "<br>");
+}
+//  6: Student Marks Sheet------------
+
+document.write("<h2 style='color:blue;'>Question 6</h2>");
+
+let  sub1 = prompt("Enter first subject name");
+let sub2 = prompt("Enter second subject name");
+let sub3 = prompt("Enter third subject name");
+
+let total = 100;
+
+let m1 = Number(prompt("Enter first subject marks"));
+let m2 = Number(prompt("Enter second subject marks"));
+let m3 = Number(prompt("Enter third subject marks"));
+
+let obtained = m1 + m2 + m3;
+let totalMarks = total * 3;
+let percentage = (obtained / totalMarks) * 100;
+
+document.write("<table border='1' cellpadding='10' style='border-collapse:collapse; background-color:white; width:100%;'>");
+
+document.write("<tr style='background-color:steelblue; color:white;'>");
+document.write("<th>Subject</th>");
+document.write("<th>Total Marks</th>");
+document.write("<th>Obtained Marks</th>");
+document.write("<th>Percentage</th>");
+document.write("</tr>");
+
+document.write("<tr><td>" + sub1 + "</td><td>100</td><td>" + m1 + "</td><td>" + m1 + "%</td></tr>");
+document.write("<tr><td>" + sub2 + "</td><td>100</td><td>" + m2 + "</td><td>" + m2 + "%</td></tr>");
+document.write("<tr><td>" + sub3 + "</td><td>100</td><td>" + m3 + "</td><td>" + m3 + "%</td></tr>");
+document.write("<tr style='font-weight:bold;'>");
+document.write("<td>Total</td>");
+document.write("<td>" + totalMarks + "</td>");
+document.write("<td>" + obtained + "</td>");
+document.write("<td>" + percentage.toFixed(2) + "%</td>");
+document.write("</tr>");
+document.write("</table>");
+
+</script>
+</body>
+</html>

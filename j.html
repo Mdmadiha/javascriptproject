@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Question 1 - Math Expressions</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 24px; line-height: 1.6; color: #222;">
+
+  <div style="border: 1px solid #ccc; border-radius: 6px; padding: 16px; max-width: 460px; background-color: #fafafa;">
+    <h3 style="margin-top: 0;"> 👇🏻 1: Increment &amp; Decrement</h3>
+
+    <label for="numInput" style="display: block; margin-bottom: 6px; font-weight: bold;">Enter a number:</label>
+    <input id="numInput" type="number" value="10" style="padding: 6px 10px; width: 140px; border: 1px solid #aaa; border-radius: 4px;" />
+    <button type="button" onclick="calculate()" style="padding: 6px 12px; margin-left: 6px; cursor: pointer;">Run</button>
+
+    <div id="output" style="margin-top: 14px; padding-top: 12px; border-top: 1px solid #ddd;"></div>
+  </div>
+  <!---------2---------->
+
+  <div style="border: 1px solid #ccc; border-radius: 6px; padding: 16px; max-width: 460px; background-color: #fafafa;">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque perferendis cum, expedita ipsa odio delectus dolorum dolore rerum vitae maxime accusamus adipisci sapiente aspernatur tenetur dolores consequuntur iusto suscipit quae voluptas vel facere, unde ad, earum animi. Quibusdam et odit officiis veritatis, facere rem, odio, recusandae aspernatur assumenda culpa blanditiis.</p>
+  </div>
+  <script>
+    function calculate() {
+      // 1. Take number from input (.value) into a variable
+      let a = Number(document.getElementById("numInput").value);
+
+      // Example of .toFixed() (formatting a decimal number to 2 decimal places)
+      let sampleFixed = (a / 3).toFixed(2);
+      console.log("Sample divided value (.toFixed(2)):", sampleFixed);
+
+      let out = document.getElementById("output");
+      out.innerHTML = "";
+
+      out.innerHTML += "The value of a is: " + a + "<br>";
+      console.log("The value of a is:", a);
+
+      out.innerHTML += "The value of ++a is: " + (++a) + "<br>";
+      console.log("The value of ++a is:", a);
+      out.innerHTML += "Now the value of a is: " + a + "<br>";
+
+      out.innerHTML += "The value of a++ is: " + (a++) + "<br>";
+      console.log("The value of a++ previous value, now a is:", a);
+      out.innerHTML += "Now the value of a is: " + a + "<br>";
+
+      out.innerHTML += "The value of --a is: " + (--a) + "<br>";
+      console.log("The value of --a is:", a);
+      out.innerHTML += "Now the value of a is: " + a + "<br>";
+
+      out.innerHTML += "The value of a-- is: " + (a--) + "<br>";
+      console.log("The value of a-- previous value, now a is:", a);
+      out.innerHTML += "Now the value of a is: " + a + "<br>";
+
+         }
+    // Run once on load with default value 10
+    calculate();
+
+    //---------2-----------
+    let a = 2, b = 1;
+        let result = --a - --b + ++b + b--;
+
+        
+  </script>
+
+</body>
+</html>

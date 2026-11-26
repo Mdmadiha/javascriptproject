@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 1 & 2</title>
+</head>
+<body>
+    <h1 style="color: crimson;"> Chapter-1 & 2</h1>
+    Score:<input type="text" id="m">                Score:<input type="text" id="d">    Score:<input type="text" id="k">
+    <br>
+    <br>
+     <button onclick="sum()">SUM </button>
+     <input type="text" id="s" style="color:brown;">
+     <br>
+     <hr>
+    <p>1.Write a Script to greet your website visitor using JS alert box.</p>
+    <button onclick="alertmessage()">alert</button>
+    <p>2.Write a script  to display following message on your web Page.</p>
+    <button onclick="alertmessage1()">javascript Alert</button>
+    <p>3.Write a script to display following message on your web Page:(Hint : Use line break)</p>
+    <button onclick="welcomingmessage()">Welcome</button>
+    <p>4.Write a script to display following message in sequence:</p>
+    <button onclick="greet()">Greet</button>
+    <p> 5.Generate the following message through browser's developer console.</p>
+    <p>6. Make use of alerts in your new/ existing HTML & CSS project.</p>
+    <button onclick="loginalert()">LOGIN </button>
+    <!.........a.Head..............>
+    <p>Practice placements of<script></script> element in following sections of your project in exercise 6:<br>a.Head</p> 
+    <button onclick="head()">Script in Head</button>
+    <p>8. Write a script to display this in browser through JS (Document.write 👇🏻)</p>
+<p>9. Store following string in a variable and show in alert and answer browser through JS</p>
+<button onclick="designString()"> Design String</button><br>
+    <script>
+        console.log ("5.Hello.... I can run JS  through my web browser's console.")
+        function alertmessage(){
+        alert("Welcome to my Website!")
+    }
+         function alertmessage1(){
+         alert("Error! Please enter a valid")
+         }
+         function welcomingmessage(){
+            alert("Welcome to JS Land...... \n Happy Coding!")
+         }
+function greet(){
+    alert("Welcome to JS Land")
+    alert("Happy Coding! \n ☕Prevent this Page from creating additional dialogs.")
+}
+function loginalert(){
+    alert ("Are you sure want to")
+}
+function head(){
+    alert ("Script in Head")
+}
+document.write("Yah! I can write HTML content through  JavaScript")
+
+function designString(){
+    alert("“▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬”")
+}
+function sum(){
+    let b=parseInt(document.getElementById("m").value)
+    let e=parseInt(document.getElementById("d").value)
+    let j=parseInt(document.getElementById("k").value)
+
+    document.getElementById("s").value=(b+e+j)
+}
+
+    </script>
+ <script src="chapter2.js"></script>  
+
+</body>
+</html>
+ 

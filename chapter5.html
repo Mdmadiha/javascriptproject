@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHAPTER-5 MATH EXPRESSIONS</title>
+</head>
+<body>
+    <h1 style="color: brown;">Chapter-5 </h1>
+   <script>
+//----------1-----------
+    var number1=9
+    var number2=8
+    var sum=number1+number2
+    document.write(" 1. Sum of " + number1 +" and "+ number2 +" is "+ sum +"<br><br>")
+    //--------------2-----------
+let  sub=number1-number2,mul=number1*number2, div=number1/number2,mod=number1%number2
+ document.write(" 2. Subtraction of  " + number1 +" and "+ number2 +" is "+ sub +  "<br><br>" )
+document.write (" 2. Multiplication of  " + number1 + "  and  "  + number2 + "  is" + mul + "<br><br>")
+document.write (" 2. Division of  " + number1 + "  and " + number2 + "  is " + div + "<br><br>")
+document.write (" 2. Modules of  " + number1 + "  and  " + number2 + " is " + mod + "<br><br>")
+
+//-----------3-----------------
+let number
+document.write("Value after variable declaration is :" + number + "<br>")
+ number = 5
+ document.write("Initial value : " + number +" <br> ")
+ number ++
+ document.writenumber = ( " Value after increment is :" + number + "<br>") 
+  number =number + 7
+ document.write(" Value after addition is :" + number + "<br>")
+number --
+document.write("Value after decrement is: " + number + "<br>")
+ let remainder = number % 3
+ document.write(" 3. The remainder is:" + remainder + "<br><br>")
+
+ //-----------4----------
+ let ticketprice =600
+ let numberofticket =5
+ let totalcost = ticketprice*numberofticket
+ document.write(" 4. Total cost to buy " + numberofticket + " tickets to a movie is  " +totalcost + " PKR " +"<br><br>")
+
+ //------5--------
+ let tablenumber=5
+ document.write(" 5. Table of " + tablenumber + " <br><br> ")
+ for (let i=1;i<=15 ;i++){
+    document.write(tablenumber + " x " + i + " = " + (tablenumber*i)+"<br><br>")
+ }
+ //---------6 Celcius---------
+ document.write("<h4> 6. 👇🏻 Celcius & Fahrenheit </h4>")
+ let celsius=25
+let fahrenheitFromC=(celsius* 9/5) + 32
+document.write(celsius + "°C is" + fahrenheitFromC + "°F <br><br>") 
+
+//Fahrenheit------------
+let fahrenheit =70
+let celsiusFromF =(fahrenheit-32)*5/9
+document.write( fahrenheit + " °F is " + celsiusFromF + "°C")
+
+//7. -----e-commerce--------
+let item1=650
+let item2=100
+let quantityitem1 =3
+let quantityitem2=7
+let shippingcharges=100
+let amount=(item1*quantityitem1)+(item2*quantityitem2)+shippingcharges
+
+document.write("<h4> 8. 👇🏻E-Commerce </h4>")
+document.write(`total cost of item1 and item2 is :` + amount + "<br>")
+
+//8.-------Mark sheet----
+let totalMarks=980
+let marksObtained=804
+let percentage=(marksObtained/totalMarks)*100
+
+document.write("<h4> 8. 👇🏻Marks Sheet </h4>")
+document.write("Total marks: " + totalMarks + "<br><br>")
+document.write ("Marks Obtained: " + marksObtained + "<br><br>")
+document.write (" Percentage :" + percentage +" % ")
+
+//9.---------Currency in PKR-------
+document.write("<h4> 9. 👇🏻 Currency in PKR </h4>") 
+let totalPKR =(10*104.80) + (25.*28)
+document.write(" Total Currency in PKR " + totalPKR) 
+
+//10.-----write a  program to initialize a variable with some number and do arithmetic in following sequence:-----
+document.write ("<h4> 10 . 👇🏻 all calculations  </h4>")
+let numb=5
+let result = ((numb + 5) * 10) / 2
+document.write(" Result " + result)
+
+//11. -----Age Calculator-----------
+document.write ("<h4> 11. 👇🏻 Age Calculator </h4>")
+let currentyear =2016
+let birthyear=1992
+let age =currentyear-birthyear
+document.write("Current year: " + currentyear + "<br><br>")
+document.write ("Birth year : " + birthyear + "<br><br>")
+document.write("They are " + age + " years old " )
+
+//12. ------The Geometrizer-------
+document.write ("<h4> 12. 👇🏻 The Geometrizer </h4>")
+let radius=20
+let pi=3.142
+
+let circumference  = 2*pi*radius
+let area = pi*radius*radius
+
+document.write("Radius of a circle :" + radius + "<br><br>")
+document.write(" The Circumference: " + circumference + "<br><br>")
+document.write(" The area :" + area + "<br><br>")
+
+//13.------The Lifetime Supply Calculator------
+document.write ("<h4> 13.👇🏻 The Lifetime Supply Calculator </h4> ")
+let favouriteSnack ="chocochip"
+let currentage =15
+let estimatedage =65
+let amountperday =3
+
+let total=((estimatedage -currentage)*365*amountperday)
+document.write("Favourite Snack :" + favouriteSnack + "<br><br>")
+document.write (" Current age  : " + currentage +"<br><br>")
+document.write (" Estimated age : " + estimatedage +"<br><br>")
+document.write ("Amount Of Snacks Per day :" + amountperday +"<br><br>")
+
+document.write (" You will need  " + total + "  " + favouriteSnack + " to Last you until the ripe old age of 65. ")
+
+
+   </script> 
+</body>
+</html>
